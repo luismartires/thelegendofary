@@ -27,6 +27,7 @@ class Attack {
     ) {
       currentGame.attacks.splice(index, 1);
       currentGame.trolls.lives--;
+      currentGame.trolls.drawDamageReceived();
 
       if (currentGame.trolls.lives == 0) {
         currentGame.gameOver = true;

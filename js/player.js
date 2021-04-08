@@ -3,9 +3,9 @@ console.log("Player Connected");
 class Player {
   constructor() {
     this.x = 150;
-    this.y = 470;
+    this.y = 450;
     this.width = 110;
-    this.height = 115;
+    this.height = 100;
     this.lives = 3;
     this.runningRight = [
       "./images/player/_RUN_000.png",
@@ -109,6 +109,7 @@ class Player {
           this.drawRunningLeft();
         }
         break;
+
       case 39:
         if (this.x < 430) {
           this.x += 10;
@@ -116,6 +117,6 @@ class Player {
         }
         break;
     }
-    this.drawPlayer()
+    this.drawPlayer();
   }
 }

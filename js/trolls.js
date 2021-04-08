@@ -6,8 +6,19 @@ class Trolls {
     this.y = this.y;
     this.lives = 7;
 
+    this.damageReceived = [
+      "./images/enemies/HURT_000.png",
+      "./images/enemies/HURT_001.png",
+      "./images/enemies/HURT_002.png",
+      "./images/enemies/HURT_003.png",
+      "./images/enemies/HURT_004.png",
+      "./images/enemies/HURT_005.png",
+      "./images/enemies/HURT_006.png",
+    ];
+    this.currentDamageReceivedIndex = 0;
+
     this.image = new Image();
-    this.image.src = "./images/enemies/redtroll.png";
+    this.image.src = "./images/enemies/HURT_000.png";
     this.image.addEventListener("load", () => {
       this.drawTroll();
     });
@@ -56,7 +67,7 @@ class Trolls {
   }
 
   drawTroll() {
-    context.drawImage(this.image, 650, 230, 400, 370);
+    context.drawImage(this.image, 650, 250, 400, 350);
   }
 
   drawTrollMainHeart() {
@@ -84,5 +95,15 @@ class Trolls {
 
   drawTrollHeart6() {
     context.drawImage(this.trollHeart6, 900, 180, 35, 35);
+  }
+
+  drawDamageReceived() {
+    if (this.currentDamageReceivedIndex === 6) {
+      this.currentDamageReceivedIndex = 0;
+    } else {
+      this.currentDamageReceivedIndex += 1;
+    }
+    this.image.src = this.damageReceived[this.currentDamageReceivedIndex];
+    this.drawTroll();
   }
 }

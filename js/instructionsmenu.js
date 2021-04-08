@@ -5,20 +5,20 @@ let newInstructionsMenu;
 const canvasMenu = document.getElementById("town");
 
 class Instructions {
-  constructor(width, height) {
-    this.x = 150;
-    this.y = 470;
-    this.width = width;
-    this.height = height;
+  constructor(x, y, width, height) {
+    this.x = 0;
+    this.y = 0;
+    this.width = 400;
+    this.height = 620;
     this.image = new Image();
-    this.image.src = "./images/backgrounds/town-instructions.png";
+    this.image.src = "./images/backgrounds/town-instructionsv3.png";
     this.image.addEventListener("load", () => {
       this.draw();
     });
   }
 
   draw() {
-    context.drawImage(this.image, 0, 0, 1072, 602);
+    context.drawImage(this.image, this.x, this.y, this.width, this.height);
   }
 }
 

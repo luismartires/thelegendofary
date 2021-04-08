@@ -2,6 +2,8 @@ console.log("Levels Connected");
 let newBattleZone;
 let newPlayer;
 
+const backgroundTownMusic = new Audio("./audio/prologue.mp3");
+
 const canvasLevels = document.getElementById("town");
 
 class Levels {
@@ -22,8 +24,15 @@ class Levels {
   }
 }
 
+canvasMenu.addEventListener("click", (e) => {
+  if (e.layerX > 897 && e.layerX < 928 && e.layerY > 98 && e.layerY < 127) {
+    backgroundTownMusic.play();
+  }
+});
+
 canvasLevels.addEventListener("click", (e) => {
   if (e.layerX > 957 && e.layerX < 1020 && e.layerY > 472 && e.layerY < 518) {
+    backgroundTownMusic.pause();
     newBattleZone = new Levels();
     newPlayer = new Player();
     newTroll = new Trolls();

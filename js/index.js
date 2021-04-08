@@ -2,7 +2,6 @@ let currentGame;
 let obstaclesFrequency = 0;
 let animationId;
 
-const backgroundTownMusic = new Audio("./audio/prologue.mp3");
 const backgroundBattleMusic = new Audio("./audio/GranBatalla.mp3");
 
 const townCanvas = document.getElementById("town");
@@ -129,7 +128,7 @@ function updateCanvas() {
 
   currentGame.obstacles.forEach((obstacle, index) => {
     obstacle.y += 1;
-    obstacle.draw();
+    obstacle.drawRocks();
 
     if (detectCollision(obstacle)) {
       currentGame.player.lives--;

@@ -1,5 +1,4 @@
 console.log("Houses connected");
-const lucia = "ola";
 
 class Houses {
   constructor(x, y, width, height) {
@@ -31,28 +30,29 @@ class Houses {
     });
 
     const dirRight = new Image();
-    dirRight.src = "./images/direction-boards/direction-right.png";
+    dirRight.src = "./images/direction-boards/direction-right-click.png";
     dirRight.addEventListener("load", () => {
       context.drawImage(dirRight, 950, 450, 100, 120);
     });
-
+    /*
     const dirLeft = new Image();
     dirLeft.src = "./images/direction-boards/direction-left.png";
     dirLeft.addEventListener("load", () => {
       context.drawImage(dirLeft, 20, 450, 100, 120);
     });
-
-    const instructionsMenuTest = new Image();
-    instructionsMenuTest.src = "./images/menu/test.png";
-    instructionsMenuTest.addEventListener("load", () => {
-      context.drawImage(instructionsMenuTest, 950, 90, 30, 30);
-    });
-
+  */
     const instructionsMenu = new Image();
-    instructionsMenu.src = "./images/menu/menu.png";
+    instructionsMenu.src = "./images/menu/infov2.png";
     instructionsMenu.addEventListener("load", () => {
-      context.drawImage(instructionsMenu, 850, 0, 200, 200);
+      context.drawImage(instructionsMenu, 940, 75, 60, 60);
     });
+
+    const playMusic = new Image();
+    playMusic.src = "./images/menu/playbutton.png";
+    playMusic.addEventListener("load", () => {
+      context.drawImage(playMusic, 880, 75, 60, 60);
+    });
+
   }
 
   click() {
