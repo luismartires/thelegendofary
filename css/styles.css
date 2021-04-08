@@ -47,6 +47,22 @@ body {
     background-repeat: no-repeat;
 }
 
+.contacts {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 30px;
+    font-style: oblique;
+
+}
+
+.contacts-img {
+    height: 50px;
+    width: 50px;
+}
+
 .town-box {
     background-image: url("../images/menu/background-papv2.png");
     background-repeat: no-repeat;
@@ -55,7 +71,7 @@ body {
 }    
 
 #game-over-img {
-    border: 6px solid white;
+    border: 3.5px solid black;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 10%;
@@ -64,7 +80,7 @@ body {
 }
 
 .game {
-    border: 6px solid white;
+    border: 3.5px solid black;
     background-image: url("../images/backgrounds/town.png");
     background-size: contain;
     background-repeat: no-repeat;
