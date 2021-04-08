@@ -7,6 +7,20 @@
     <title>The Legend of Ary</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./images/player/_RUN_000.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_001.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_002.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_003.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_004.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_005.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_006.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_000L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_001L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_002L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_003L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_004L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_005L.png" as="image">
+    <link rel="preload" href="./images/player/_RUN_006L.png" as="image">
     <style>
         * { cursor: url("images/cursor/cursor.png"), default; }
     </style>
@@ -23,15 +37,26 @@
         </header>
 
         <div class="town-box">
-        <div class="game-box">
-        <canvas class="game" id="town" width="1071" height="602"></canvas> 
+        <div id="game-box" class="game-box">
+            <canvas class="game" id="town" width="1071" height="602"></canvas> 
+        </div>
+
+        <div id="game-over" style="display:none">
+            <img id="game-over-img" src="./images/backgrounds/battle-bg-died.png">
+        </div>
+        
+        <div id="game-victory" style="display:none">
+            <img id="game-over-img" src="./images/backgrounds/battle-bg-victory.png">
         </div>
         </div>
 
 
 
-
-        <script src="./js/enemies.js"></script>
+        <script src="./js/instructionsmenu.js"></script>
+        <script src="./js/attack.js"></script>
+        <script src="./js/obstacles.js"></script>
+        <script src="./js/trolls.js"></script>
+        <script src="./js/player.js"></script>
         <script src="./js/levels.js"></script>
         <script src="./js/game.js"></script>
         <script src="./js/houses.js"></script>

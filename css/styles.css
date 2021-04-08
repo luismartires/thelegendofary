@@ -54,6 +54,15 @@ body {
     padding: 0px 100px 200px 100px;
 }    
 
+#game-over-img {
+    border: 6px solid white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    width: 1071px;
+    height: 602px;
+}
+
 .game {
     border: 6px solid white;
     background-image: url("../images/backgrounds/town.png");

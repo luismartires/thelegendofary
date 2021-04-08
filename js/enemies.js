@@ -1,4 +1,7 @@
+/*
 console.log("Enemies Connected");
+
+const canvasEnemies = document.getElementById("town");
 
 class Trolls {
   constructor(x, y, width, height) {
@@ -17,8 +20,10 @@ class Trolls {
   }
 }
 
-const newTrolls = new Trolls(680, 270, 200, 200);
-
-document.addEventListener("click", (e) => {
-  newTrolls.draw();
+const newTrolls = new Trolls();
+canvasEnemies.addEventListener("click", (e) => {
+  if (e.layerX > 957 && e.layerX < 1020 && e.layerY > 472 && e.layerY < 518) {
+    newTrolls.draw();
+  }
 });
+*/

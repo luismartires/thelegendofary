@@ -1,4 +1,5 @@
 console.log("Houses connected");
+const lucia = "ola";
 
 class Houses {
   constructor(x, y, width, height) {
@@ -6,6 +7,8 @@ class Houses {
     this.y = y;
     this.width = width;
     this.height = height;
+
+    this.draw();
   }
 
   draw() {
@@ -37,6 +40,18 @@ class Houses {
     dirLeft.src = "./images/direction-boards/direction-left.png";
     dirLeft.addEventListener("load", () => {
       context.drawImage(dirLeft, 20, 450, 100, 120);
+    });
+
+    const instructionsMenuTest = new Image();
+    instructionsMenuTest.src = "./images/menu/test.png";
+    instructionsMenuTest.addEventListener("load", () => {
+      context.drawImage(instructionsMenuTest, 950, 90, 30, 30);
+    });
+
+    const instructionsMenu = new Image();
+    instructionsMenu.src = "./images/menu/menu.png";
+    instructionsMenu.addEventListener("load", () => {
+      context.drawImage(instructionsMenu, 850, 0, 200, 200);
     });
   }
 
